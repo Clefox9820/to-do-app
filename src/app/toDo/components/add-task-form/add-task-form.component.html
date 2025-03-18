@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+  <div class="col-6">
+    <div class="card shadow-lg border-0 rounded-lg">
+      <div class="card-header bg-dark text-white text-center">
+        <h1>Agregar Tarea</h1>
+      </div>
+      <div class="card-body p-4">
+        <form>
+          <div class="form-group mb-3">
+            <label for="taskId">ID</label>
+            <input id="taskId" type="number" class="form-control" [value]="id()" readonly disabled/>
+          </div>
+          <div class="form-group mb-3">
+            <label for="taskName">Nombre</label>
+            <input id="taskName" type="text" class="form-control" [value]="name()"
+              (change)="name.set(txtName.value)" (input)="name.set(txtName.value)"
+              #txtName/>
+          </div>
+          <div class="form-group mb-3">
+            <label for="taskDescription">Descripción</label>
+            <input id="taskDescription" type="text" class="form-control" [value]="description()"
+              (change)="description.set(txtDescription.value)" (input)="description.set(txtDescription.value)"
+              #txtDescription/>
+          </div>
+          <div class="form-group mb-3">
+            <label for="initialDate">Fecha de Inicio</label>
+            <input id="initialDate" type="date" class="form-control" [value]="initialDate()"
+              (change)="initialDate.set(txtInitialDate.value)" (input)="initialDate.set(txtInitialDate.value)"
+              #txtInitialDate/>
+          </div>
+          <div class="form-group mb-3">
+            <label for="deadLine">Fecha Límite</label>
+            <input id="deadLine" type="date" class="form-control" [value]="deadLine()"
+              (change)="deadLine.set(txtDeadLine.value)" (input)="deadLine.set(txtDeadLine.value)"
+              #txtDeadLine/>
+          </div>
+          <div class="form-group mb-3">
+            <label for="taskType">Tipo de Tarea</label>
+            <input id="taskType" type="text" class="form-control" [value]="type()"
+              (change)="type.set(txtType.value)" (input)="type.set(txtType.value)"
+              #txtType/>
+          </div>
+          <button class="btn btn-success btn-block" (click)="addTask()" [routerLink]="'/'">Agregar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

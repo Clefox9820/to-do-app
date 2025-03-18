@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+#addTask {
+  float: right;
+}
+
+
+
+#actionTitle {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}

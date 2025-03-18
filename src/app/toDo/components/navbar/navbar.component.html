@@ -1,0 +1,8 @@
+<nav>
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Lista de tareas</a>
+  <a [routerLink]="['/add-task']" [routerLinkActive]="'active'">Añadir/Editar tarea</a>
+  <a [routerLink]="['/completed-tasks']" [routerLinkActive]="'active'">Tareas Completadas</a>
+  <a [routerLink]="['/pending-tasks']" [routerLinkActive]="'active'">Tareas Pendientes</a>
+</nav>
+
+
